@@ -1,4 +1,4 @@
-package ilayda.ilayda;
+package ilayda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,12 +18,5 @@ public class IlaydaApplication {
 		SpringApplication.run(IlaydaApplication.class, args);
 	}
 
-	@Bean
-	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("ilayda.ilayda"))
-				.paths(PathSelectors.any())
-				.build();
-	}
 
 }
